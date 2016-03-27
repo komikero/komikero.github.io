@@ -49,35 +49,6 @@ angular.module('app', [])
         numPlace3 = 0;
         numPlace4 = 0;
         localStorage.setItem("store", JSON.stringify(this.scores));
-        /*this.hitPoint = 0;
-    this.shotPoint = 0;
-        for (var i = 0, len = this.scores.length; i < len; i++) {
-    if(this.scores[i].Shot1st == 11){
-        this.hitPoint ++;
-        this.shotPoint ++;
-    } else if(this.scores[i].Shot1st == 12){
-        this.shotPoint ++;
-    }
-    if(this.scores[i].Shot2nd == 11){
-        this.hitPoint ++;
-        this.shotPoint ++;
-    } else if(this.scores[i].Shot2nd == 12){
-        this.shotPoint ++;
-    }
-    if(this.scores[i].Shot3rd == 11){
-        this.hitPoint ++;
-        this.shotPoint ++;
-    } else if(this.scores[i].Shot3rd == 12){
-        this.shotPoint ++;
-    }
-    if(this.scores[i].Shot4th == 11){
-        this.hitPoint ++;
-        this.shotPoint ++;
-    } else if(this.scores[i].Shot4th == 12){
-        this.shotPoint ++;
-    }
-    this.ratio = Math.round(this.hitPoint / this.shotPoint * 10000) / 100;
-}*/
             this.rateReflesh();
         $("#form").animate({
         top: 1920 
@@ -112,35 +83,7 @@ angular.module('app', [])
             this.pp = 0;
             this.ed = 0;
         localStorage.setItem("store", JSON.stringify(this.scores));
-        /*this.hitPoint = 0;
-    this.shotPoint = 0;
-        for (var i = 0, len = this.scores.length; i < len; i++) {
-    if(this.scores[i].Shot1st == 11){
-        this.hitPoint ++;
-        this.shotPoint ++;
-    } else if(this.scores[i].Shot1st == 12){
-        this.shotPoint ++;
-    }
-    if(this.scores[i].Shot2nd == 11){
-        this.hitPoint ++;
-        this.shotPoint ++;
-    } else if(this.scores[i].Shot2nd == 12){
-        this.shotPoint ++;
-    }
-    if(this.scores[i].Shot3rd == 11){
-        this.hitPoint ++;
-        this.shotPoint ++;
-    } else if(this.scores[i].Shot3rd == 12){
-        this.shotPoint ++;
-    }
-    if(this.scores[i].Shot4th == 11){
-        this.hitPoint ++;
-        this.shotPoint ++;
-    } else if(this.scores[i].Shot4th == 12){
-        this.shotPoint ++;
-    }
-    this.ratio = Math.round(this.hitPoint / this.shotPoint * 10000) / 100;
-}*/
+       
             this.rateReflesh();
         $("#form").animate({
         top: 1920 
@@ -152,39 +95,7 @@ angular.module('app', [])
         
     }
     
-    /*this.hitPoint = 0;
-    this.shotPoint = 0;
-    for (var i = 0, len = this.scores.length; i < len; i++) {
-    if(this.scores[i].Shot1st == 11){
-        this.hitPoint ++;
-        this.shotPoint ++;
-    } else if(this.scores[i].Shot1st == 12){
-        this.shotPoint ++;
-    }
-    if(this.scores[i].Shot2nd == 11){
-        this.hitPoint ++;
-        this.shotPoint ++;
-    } else if(this.scores[i].Shot2nd == 12){
-        this.shotPoint ++;
-    }
-    if(this.scores[i].Shot3rd == 11){
-        this.hitPoint ++;
-        this.shotPoint ++;
-    } else if(this.scores[i].Shot3rd == 12){
-        this.shotPoint ++;
-    }
-    if(this.scores[i].Shot4th == 11){
-        this.hitPoint ++;
-        this.shotPoint ++;
-    } else if(this.scores[i].Shot4th == 12){
-        this.shotPoint ++;
-    }
-}
-if(this.hitPoint == 0){
-    this.ratio == 0;
-}else {
-    this.ratio = Math.round(this.hitPoint / this.shotPoint * 10000) / 100;
-}*/
+   
 
 this.rateReflesh = function(){
     this.hitPoint = 0;
@@ -625,7 +536,7 @@ function lowlight3(){
 function highlight4(){
     $("#styleLine4").css('opacity', '1');
     $("#form").animate({
-        top: -200
+        top: -250
         }, 300 );
 }
 
