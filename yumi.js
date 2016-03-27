@@ -309,6 +309,12 @@ this.state = "Today";
     }
 })
 
+window.addEventListener("load", function() {
+    setTimeout(function() {
+        scrollTo(0, 1);
+    }, 100);
+}, false);
+
 var numHit = 0;
 var numHit2 = 0;
 var numHit3 = 0;
