@@ -95,7 +95,21 @@ angular.module('app', [])
         
     }
     
+   this.import = function(){
+       this.scores = JSON.parse($scope.import);
+    localStorage.setItem("store",$scope.import);
+       closePort();
+       $scope.import = "";
+   }
    
+   this.export = function(){
+       $scope.export = JSON.stringify(this.scores);
+   }
+   
+   this.cp = function(){
+       $scope.import = "";
+       $scope.export = "";
+   }
 
 this.rateReflesh = function(){
     this.hitPoint = 0;
@@ -552,3 +566,17 @@ function lowlight4(){
         }, 300 );
 }
 
+function openPort(){
+    $("#port").css('display', 'block').animate({
+        top: 0 
+        }, 300 );
+}
+
+function closePort(){
+    $("#port").animate({
+        top: 1920 
+        }, 500 );
+    setTimeout( function(){
+    $("#port").css('display', 'none');
+       },500);
+}

@@ -22,6 +22,7 @@
         <div style="width:100%; height:100%; "><img src="backg.jpg" style="width:100%; position:absolute; top:0em; -webkit-filter: brightness(70%);
 filter: brightness(70%);"></div>
         <span style="line-height:20px; position: absolute; left:3%; top:5%; color:#FFFFFF; font-size:20px">Yumi Graph</span>
+        <i onclick="openPort()" class="ti-new-window" style="line-height:20px; position: absolute; right:3%; top:5%; color:#FFFFFF; font-size:1em"></i>
         <span style="line-height:25px; position: absolute; left:6%; top:45%; color:#FFFFFF; font-size:20px">Scores<br>of</span>
         <span style="line-height:30px; position: absolute; left:6%; top:75%; color:#FFFFFF; font-size:2.5em">{{yumi.state}}</span>
         <span style="line-height:16px; position: absolute; right:5%; top:55%; color:#FFFFFF; font-size:16px">Shot</span>
@@ -62,6 +63,7 @@ filter: brightness(70%);"></div>
     </li>
       </div>
     <div class="addButton" ng-click="yumi.dateInit()" onclick="openForm()"><i class="ti-plus" style="position:absolute; top:0.5em; left:0.5em; font-size:2em; color:#FFFFFF"></i></div>
+    <!-- フォーム -->
     <div id="form">
         <span style="font-size:50px; color:#FFFFFF; margin-left:15px" onclick="closeForm()" ng-click="yumi.batu()">×</span><br>
         <span style="font-size:24px; color:#FFFFFF; margin-left:30%">Add New Score</span>
@@ -134,6 +136,23 @@ filter: brightness(70%);"></div>
         </div>
         <br>
         <div ng-click="yumi.addNewScore()" class="addScore"><span style="margin-left:58px; top:8px; position:relative">Add New Score</span></div>
+    </div>
+    <!-- import&export -->
+    <div id="port">
+        <span style="font-size:50px; color:#FFFFFF; margin-left:15px" onclick="closePort()" ng-click="yumi.cp()">×</span><br>
+        <span style="font-size:24px; color:#FFFFFF; margin-left:30%">Import & Export</span>
+        <br><br><br><br>
+        <span style="color:#FFFFFF; float:left; margin-left:10%">Import</span>
+        <input ng-model="import" style="position:absolute; left:5em" type="text" onFocus="highlight3()" onBlur="lowlight3()">
+        <hr id="styleLine3" style="width:60%; position:absolute; left:6.2em; top:9.8em; opacity:0.5; color:#FFFFFF" size="1" noshade>
+        <br><br>
+        <div ng-click="yumi.import()" class="addScore"><span style="left:40%; top:8px; position:relative">Import</span></div>
+        <br><br><br>
+        <span style="color:#FFFFFF; float:left; margin-left:10%">Export</span>
+        <input ng-model="export" style="position:absolute; left:5em" type="text" onFocus="highlight3()" onBlur="lowlight3()">
+        <hr id="styleLine3" style="width:60%; position:absolute; left:6.2em; top:17.5em; opacity:0.5; color:#FFFFFF" size="1" noshade>
+        <br><br>
+        <div ng-click="yumi.export()" class="addScore"><span style="left:40%; top:8px; position:relative">Export</span></div>
     </div>
 </body>
 </html>
