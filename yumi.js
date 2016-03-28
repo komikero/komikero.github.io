@@ -462,8 +462,7 @@ function changePlace4(){
 }
 
 function openForm(){
-    $("#form").css('display', 'block');
-    $("#form").animate({
+    $("#form").css('display', 'block').animate({
         top: 0 
         }, 300 );
 }
